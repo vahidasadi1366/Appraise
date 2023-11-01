@@ -13,6 +13,8 @@ from .pairwise_assessment import *
 from .pairwise_assessment_document import *
 from .task_agenda import *
 
+from .direct_assessment_window_document import *
+
 # Task definitions: user-friendly name, task class, task result class, URL name
 TASK_DEFINITIONS = (
     (
@@ -42,7 +44,25 @@ TASK_DEFINITIONS = (
         'evaldata_directassessmentdocumenttasks',
         'evaldata_directassessmentdocumentresults',
     ),
+#   (
+#        'LongDocument',
+#        DirectAssessmentDocumentTask,
+#        DirectAssessmentDocumentResult,
+#        'direct-assessment-document',
+#        TextPairWithContext,
+#        'evaldata_directassessmentdocumenttasks',
+#        'evaldata_directassessmentdocumentresults',
+#    ),
     (
+        'Window',
+        DirectAssessmentWindowDocumentTask,
+        DirectAssessmentWindowDocumentResult,
+        'direct-assessment-window-document',
+        TextPairWithContext,
+        'evaldata_directassessmentwindowdocumenttasks',
+        'evaldata_directassessmentwindowdocumentresults',
+    ),
+     (
         'MultiModal',
         MultiModalAssessmentTask,
         MultiModalAssessmentResult,

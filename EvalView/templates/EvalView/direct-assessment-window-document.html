@@ -276,7 +276,7 @@ function submit_form(e) {
     if (score == prev_score) {
         e.preventDefault();
         _hide_target_box.call(item_box);
-        //item_box.hide()
+        item_box.hide()
         _show_target_box.call(item_box.next());
         return true;
     }
@@ -303,7 +303,7 @@ function submit_form(e) {
                 _change_item_status_icon(item_box, 'refresh');
                 // Move to the next item immediately
                 _hide_target_box.call(item_box);
-                //item_box.hide()
+                item_box.hide()
                 _show_target_box.call(item_box.next());
             },
             success: function(data) {

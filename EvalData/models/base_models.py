@@ -97,6 +97,7 @@ class ObjectID(models.Model):
                 MultiModalAssessmentTask,
                 PairwiseAssessmentDocumentTask,
                 PairwiseAssessmentTask,
+                DirectAssessmentWindowDocumentTask,
             )
 
             instance = eval(_code)

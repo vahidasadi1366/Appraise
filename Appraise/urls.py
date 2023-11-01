@@ -192,6 +192,22 @@ urlpatterns = [
         campaign_views.campaign_status,
         name='campaign_status',
     ),
+    re_path(
+        r'^direct-assessment-window-document/$',
+        evalview_views.direct_assessment_window_document,
+        name='direct-assessment-window-document',
+    ),
+    re_path(
+        r'^direct-assessment-window-document/(?P<code>[a-z]{3})/$',
+        evalview_views.direct_assessment_window_document,
+        name='direct-assessment-window-document',
+    ),
+    re_path(
+        r'^direct-assessment-window-document/(?P<code>[a-z]{3})/'
+        r'(?P<campaign_name>[a-zA-Z0-9]+)/$',
+        evalview_views.direct_assessment_window_document,
+        name='direct-assessment-window-document',
+    ),
 ]
 
 if DEBUG:
